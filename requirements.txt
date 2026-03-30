@@ -1,0 +1,16 @@
+groq
+chromadb
+sentence-transformers
+langchain
+langchain-community
+langchain-groq
+neo4j
+pymupdf
+spacy
+streamlit
+plotly
+pandas
+python-dotenv
+tqdm
+requests
+rich
