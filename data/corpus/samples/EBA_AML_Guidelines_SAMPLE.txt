@@ -1,0 +1,37 @@
+EBA Guidelines on Anti-Money Laundering and Counter-Terrorist Financing (AML/CFT)
+EBA/GL/2021/02 — Final Guidelines
+
+1. SUBJECT MATTER AND SCOPE
+These Guidelines apply to credit institutions and financial institutions within the meaning of Directive (EU) 2015/849.
+
+2. CUSTOMER DUE DILIGENCE (CDD)
+2.1 Institutions shall apply CDD measures when establishing a business relationship.
+2.2 CDD measures include: identifying and verifying customer identity, identifying beneficial owners, and understanding the business relationship.
+
+3. ENHANCED DUE DILIGENCE (EDD)
+3.1 Institutions shall apply EDD measures in higher-risk situations including:
+    - Business relationships or transactions involving high-risk third countries
+    - Correspondent banking relationships
+    - Transactions involving Politically Exposed Persons (PEPs)
+    - Complex or unusual transactions with no apparent economic purpose
+
+4. POLITICALLY EXPOSED PERSONS (PEPs)
+4.1 For PEPs, institutions must obtain senior management approval before establishing business relationships.
+4.2 Institutions shall take adequate measures to establish the source of wealth and source of funds of PEPs.
+4.3 Enhanced ongoing monitoring of the business relationship shall be conducted for PEPs.
+
+5. BENEFICIAL OWNERSHIP
+5.1 Institutions shall identify and verify the identity of beneficial owners, defined as natural persons who own or control more than 25% of shares or voting rights.
+5.2 Where no natural person can be identified as beneficial owner, institutions shall identify the senior managing official.
+
+6. SUSPICIOUS ACTIVITY REPORTING (SAR)
+6.1 Institutions shall file a suspicious transaction report (STR) with the national Financial Intelligence Unit (FIU) where they suspect money laundering or terrorist financing.
+6.2 The filing of a STR must not be disclosed to the customer or third parties (tipping-off prohibition).
+
+7. RISK-BASED APPROACH
+7.1 Institutions shall implement a risk-based approach, conducting a firm-wide risk assessment covering customer risk, product and service risk, delivery channel risk, and geographic risk.
+7.2 Simplified Due Diligence (SDD) may be applied where the risk of ML/TF is low, subject to regulatory approval.
+
+8. TRANSACTION MONITORING
+8.1 Institutions shall monitor transactions to detect unusual or suspicious patterns.
+8.2 Transaction monitoring systems shall be calibrated to the institution's risk profile and reviewed regularly.

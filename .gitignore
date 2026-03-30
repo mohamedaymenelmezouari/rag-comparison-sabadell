@@ -1,0 +1,15 @@
+venv/
+data/corpus/*.pdf
+data/chroma_db/
+__pycache__/
+*.pyc
+*.pyo
+config/__pycache__/
+pipelines/__pycache__/
+graph/__pycache__/
+app/__pycache__/
+evaluation/__pycache__/
+.DS_Store
+**/.DS_Store
+.env
+evaluation/results.json

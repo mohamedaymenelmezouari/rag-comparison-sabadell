@@ -1,0 +1,33 @@
+MiFID II — Markets in Financial Instruments Directive (2014/65/EU)
+Key Articles for Banking and Investment Services
+
+ARTICLE 24 — GENERAL PRINCIPLES AND INFORMATION TO CLIENTS
+1. Investment firms shall act honestly, fairly and professionally in accordance with the best interests of clients.
+2. All information, including marketing communications, addressed by the firm to clients shall be fair, clear and not misleading.
+3. Investment firms shall provide clients with appropriate information about: the firm and its services, financial instruments and proposed investment strategies, execution venues, and all costs and charges.
+
+ARTICLE 25 — ASSESSMENT OF SUITABILITY AND APPROPRIATENESS
+1. Investment firms shall obtain necessary information regarding the client's or potential client's knowledge and experience in the investment field, financial situation including ability to bear losses, and investment objectives including risk tolerance.
+2. SUITABILITY TEST: For portfolio management and investment advice, firms must ensure the product is suitable for the client considering their financial situation, investment objectives, and knowledge.
+3. APPROPRIATENESS TEST: For non-advised services (execution only), firms must assess whether the client has the knowledge and experience to understand the risks.
+4. Where firms determine that a product is not suitable or appropriate, they must warn the client.
+
+ARTICLE 27 — BEST EXECUTION
+1. Investment firms shall take all sufficient steps to obtain the best possible result for their clients when executing orders, taking into account price, costs, speed, likelihood of execution and settlement, size, nature, and any other consideration relevant to order execution.
+2. Firms must establish and implement an order execution policy defining procedures for complying with best execution.
+3. Firms must provide annual reports on the top 5 execution venues used per class of financial instrument.
+
+ARTICLE 30 — TRANSACTIONS EXECUTED WITH ELIGIBLE COUNTERPARTIES
+1. Investment firms may deal with eligible counterparties without applying Articles 24, 25, and 27.
+2. Eligible counterparties include: investment firms, credit institutions, insurance companies, UCITS management companies, pension funds, and national governments.
+
+PRODUCT GOVERNANCE (Articles 16 and 24)
+- Manufacturers must identify a target market for each financial instrument
+- Distributors must understand financial instruments and have a distribution strategy compatible with the target market
+- Products must be reviewed regularly to ensure they remain consistent with the target market
+- High-risk products (complex structured products, leveraged instruments) require enhanced disclosure
+
+KEY INVESTOR INFORMATION DOCUMENT (KIID)
+- Required for UCITS funds and PRIIPs (Packaged Retail and Insurance-based Investment Products)
+- Must be provided to retail clients before purchase
+- Standardised format: 2-3 pages, including risk indicator (1–7 scale), performance scenarios, and costs

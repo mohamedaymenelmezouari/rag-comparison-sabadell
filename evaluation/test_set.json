@@ -1,0 +1,212 @@
+[
+  {
+    "id": "T1_001",
+    "tier": 1,
+    "tier_name": "Simple Factual",
+    "question": "What is the minimum Common Equity Tier 1 (CET1) ratio required under Basel III?",
+    "ground_truth": "The minimum CET1 ratio under Basel III is 4.5% of risk-weighted assets (RWA). This is the core capital requirement that must be met at all times.",
+    "key_entities": ["Basel III", "CET1", "4.5%", "risk-weighted assets"],
+    "source_docs": ["Basel3_BIS_Framework.pdf", "Basel3_BIS_SAMPLE.txt"],
+    "expected_better_pipeline": "tie"
+  },
+  {
+    "id": "T1_002",
+    "tier": 1,
+    "tier_name": "Simple Factual",
+    "question": "What is the 72-hour rule in GDPR for data breaches?",
+    "ground_truth": "Under GDPR Article 33, organisations must notify the supervisory authority within 72 hours of becoming aware of a personal data breach, unless the breach is unlikely to result in risk to the rights and freedoms of individuals.",
+    "key_entities": ["GDPR", "Article 33", "72 hours", "data breach", "supervisory authority"],
+    "source_docs": ["GDPR_Regulation_2016_679_EU.pdf", "GDPR_Banking_SAMPLE.txt"],
+    "expected_better_pipeline": "tie"
+  },
+  {
+    "id": "T1_003",
+    "tier": 1,
+    "tier_name": "Simple Factual",
+    "question": "What does CDD stand for and what does it require in AML compliance?",
+    "ground_truth": "CDD stands for Customer Due Diligence. It requires institutions to identify and verify customer identity, identify the beneficial owner, and understand the nature and purpose of the business relationship.",
+    "key_entities": ["CDD", "Customer Due Diligence", "AML", "beneficial owner", "identity verification"],
+    "source_docs": ["EBA_AML_Guidelines_2021.pdf", "EBA_AML_Guidelines_SAMPLE.txt"],
+    "expected_better_pipeline": "tie"
+  },
+  {
+    "id": "T1_004",
+    "tier": 1,
+    "tier_name": "Simple Factual",
+    "question": "What is the Liquidity Coverage Ratio (LCR) minimum requirement under Basel III?",
+    "ground_truth": "The minimum LCR requirement under Basel III is 100%. It is calculated as the stock of High Quality Liquid Assets (HQLA) divided by total net cash outflows over a 30-day stress period.",
+    "key_entities": ["LCR", "100%", "HQLA", "Basel III", "30 days"],
+    "source_docs": ["Basel3_BIS_Framework.pdf", "Basel3_BIS_SAMPLE.txt"],
+    "expected_better_pipeline": "tie"
+  },
+  {
+    "id": "T1_005",
+    "tier": 1,
+    "tier_name": "Simple Factual",
+    "question": "What is the suitability test under MiFID II?",
+    "ground_truth": "Under MiFID II Article 25, the suitability test requires investment firms providing investment advice or portfolio management to assess whether a financial product is suitable for the client based on their financial situation, investment objectives, and knowledge and experience.",
+    "key_entities": ["MiFID II", "Article 25", "suitability test", "investment advice"],
+    "source_docs": ["MiFID2_Directive_2014_65_EU.pdf", "MiFID2_SAMPLE.txt"],
+    "expected_better_pipeline": "tie"
+  },
+  {
+    "id": "T2_001",
+    "tier": 2,
+    "tier_name": "Single-hop Relational",
+    "question": "What additional obligations apply specifically to Politically Exposed Persons under AML regulations?",
+    "ground_truth": "For Politically Exposed Persons (PEPs), Enhanced Due Diligence (EDD) applies instead of standard CDD. This requires: senior management approval before establishing the business relationship, adequate measures to establish the source of wealth and source of funds, and enhanced ongoing monitoring of the business relationship.",
+    "key_entities": ["PEP", "Politically Exposed Person", "EDD", "Enhanced Due Diligence", "AML", "senior management approval"],
+    "source_docs": ["EBA_AML_Guidelines_2021.pdf", "EBA_AML_Guidelines_SAMPLE.txt"],
+    "expected_better_pipeline": "graph"
+  },
+  {
+    "id": "T2_002",
+    "tier": 2,
+    "tier_name": "Single-hop Relational",
+    "question": "What capital buffers does Basel III require on top of the minimum CET1 ratio?",
+    "ground_truth": "Beyond the minimum 4.5% CET1 ratio, Basel III requires: a Capital Conservation Buffer of 2.5% CET1, and a Countercyclical Buffer of 0-2.5% CET1 set by national authorities. This brings the total potential CET1 requirement to up to 9.5% of RWA.",
+    "key_entities": ["Capital Conservation Buffer", "Countercyclical Buffer", "CET1", "Basel III", "2.5%"],
+    "source_docs": ["Basel3_BIS_Framework.pdf", "Basel3_BIS_SAMPLE.txt"],
+    "expected_better_pipeline": "graph"
+  },
+  {
+    "id": "T2_003",
+    "tier": 2,
+    "tier_name": "Single-hop Relational",
+    "question": "When does MiFID II require an appropriateness test rather than a suitability test?",
+    "ground_truth": "MiFID II requires an appropriateness test (not a suitability test) for non-advised services, specifically execution-only services where the firm does not provide investment advice or portfolio management. The appropriateness test assesses whether the client has the knowledge and experience to understand the risks of the product.",
+    "key_entities": ["MiFID II", "appropriateness test", "suitability test", "execution-only", "investment advice"],
+    "source_docs": ["MiFID2_Directive_2014_65_EU.pdf", "MiFID2_SAMPLE.txt"],
+    "expected_better_pipeline": "graph"
+  },
+  {
+    "id": "T2_004",
+    "tier": 2,
+    "tier_name": "Single-hop Relational",
+    "question": "What rights do bank customers have regarding automated credit scoring decisions under GDPR?",
+    "ground_truth": "Under GDPR Article 22, customers have the right not to be subject to solely automated decisions with significant effects, including credit scoring. Banks must ensure human review capability in credit scoring algorithms and must inform customers of their right to obtain human intervention, express their point of view, and contest the decision.",
+    "key_entities": ["GDPR", "Article 22", "automated decision-making", "credit scoring", "human review"],
+    "source_docs": ["GDPR_Regulation_2016_679_EU.pdf", "GDPR_Banking_SAMPLE.txt"],
+    "expected_better_pipeline": "graph"
+  },
+  {
+    "id": "T2_005",
+    "tier": 2,
+    "tier_name": "Single-hop Relational",
+    "question": "What is the tipping-off prohibition in AML and who does it apply to?",
+    "ground_truth": "The tipping-off prohibition in AML law (Article 39 of AMLD5) prohibits credit institutions and their employees from disclosing to a customer or third party that a Suspicious Activity Report (SAR) or Suspicious Transaction Report (STR) has been filed, or that a money laundering investigation is being conducted. Violation can result in criminal liability.",
+    "key_entities": ["tipping-off", "SAR", "STR", "AML", "AMLD5", "disclosure prohibition"],
+    "source_docs": ["EBA_AML_Guidelines_2021.pdf", "EBA_AML_Guidelines_SAMPLE.txt"],
+    "expected_better_pipeline": "graph"
+  },
+  {
+    "id": "T3_001",
+    "tier": 3,
+    "tier_name": "Multi-hop Relational",
+    "question": "Which financial products require both MiFID II suitability assessment AND are subject to AML Enhanced Due Diligence requirements?",
+    "ground_truth": "Products involving high-risk profiles can trigger both requirements. Complex investment products (structured products, derivatives, high-risk equities) require MiFID II suitability assessments. When sold to high-risk customers or in high-risk contexts, these same products may also trigger AML Enhanced Due Diligence. The overlap occurs particularly for PEPs or customers from high-risk jurisdictions purchasing complex investment products.",
+    "key_entities": ["MiFID II", "suitability assessment", "AML", "EDD", "structured products", "PEP", "high-risk"],
+    "source_docs": ["MiFID2_Directive_2014_65_EU.pdf", "EBA_AML_Guidelines_2021.pdf"],
+    "expected_better_pipeline": "graph"
+  },
+  {
+    "id": "T3_002",
+    "tier": 3,
+    "tier_name": "Multi-hop Relational",
+    "question": "How do Basel III capital requirements interact with GDPR data minimisation when storing customer data for credit risk calculations?",
+    "ground_truth": "Basel III requires banks to retain detailed credit risk data (probability of default, loss given default, exposure at default) for IRB models, often for 5-7 years. GDPR data minimisation principles require that only necessary data is retained. The interaction requires banks to rely on the legal obligation lawful basis (Article 6(1)(c) GDPR) for credit risk data retention, limiting the scope to data strictly required by Basel III/CRD IV, and implementing access controls so credit risk data is not used for other purposes.",
+    "key_entities": ["Basel III", "GDPR", "data minimisation", "credit risk", "IRB", "legal obligation", "Article 6"],
+    "source_docs": ["Basel3_BIS_Framework.pdf", "GDPR_Regulation_2016_679_EU.pdf"],
+    "expected_better_pipeline": "graph"
+  },
+  {
+    "id": "T3_003",
+    "tier": 3,
+    "tier_name": "Multi-hop Relational",
+    "question": "What is the chain of requirements from Basel III to a bank having to perform stress tests on mortgage portfolios?",
+    "ground_truth": "The chain is: Basel III sets capital adequacy requirements → which are implemented via CRD IV/CRR in the EU → which require banks to maintain adequate capital against credit risk → mortgages under the standardised approach carry 35% risk weight for residential property → the Supervisory Review and Evaluation Process (SREP) under Pillar 2 → requires banks to conduct Internal Capital Adequacy Assessment Process (ICAAP) → which includes stress testing of major portfolios including mortgages.",
+    "key_entities": ["Basel III", "CRD IV", "mortgage", "35% risk weight", "SREP", "ICAAP", "stress test"],
+    "source_docs": ["Basel3_BIS_Framework.pdf", "Sabadell_Pillar3_2024.pdf"],
+    "expected_better_pipeline": "graph"
+  },
+  {
+    "id": "T3_004",
+    "tier": 3,
+    "tier_name": "Multi-hop Relational",
+    "question": "How does the beneficial ownership threshold in AML interact with product governance obligations under MiFID II?",
+    "ground_truth": "The AML beneficial ownership threshold (25% ownership/control) identifies the ultimate natural person behind a legal entity customer. Under MiFID II product governance, firms must identify a target market including by customer type. When selling investment products to legal entities where a PEP or sanctioned individual is the beneficial owner (>25%), both AML EDD and MiFID II suitability considerations are triggered simultaneously, requiring coordinated compliance checks.",
+    "key_entities": ["beneficial ownership", "25%", "AML", "MiFID II", "product governance", "PEP", "legal entity"],
+    "source_docs": ["EBA_AML_Guidelines_2021.pdf", "MiFID2_Directive_2014_65_EU.pdf"],
+    "expected_better_pipeline": "graph"
+  },
+  {
+    "id": "T3_005",
+    "tier": 3,
+    "tier_name": "Multi-hop Relational",
+    "question": "What is the full regulatory chain triggered when a bank discovers a data breach affecting customer transaction records?",
+    "ground_truth": "The full chain: GDPR Article 33 requires notification to supervisory authority within 72 hours; GDPR Article 34 may require notification to affected customers if high risk; The breach may constitute an operational risk event under Basel III/CRR, requiring capture in the operational risk loss database; AML obligations require assessment of whether the breach could have enabled transaction monitoring evasion, potentially requiring SAR filing; PSD2 requires notification to competent authorities for major operational or security incidents; The bank's DPO must be involved throughout; Internal ICAAP documentation must be updated.",
+    "key_entities": ["GDPR", "data breach", "72 hours", "operational risk", "Basel III", "PSD2", "SAR", "DPO"],
+    "source_docs": ["GDPR_Regulation_2016_679_EU.pdf", "Basel3_BIS_Framework.pdf", "EBA_AML_Guidelines_2021.pdf"],
+    "expected_better_pipeline": "graph"
+  },
+  {
+    "id": "T4_001",
+    "tier": 4,
+    "tier_name": "Adversarial / Hallucination Test",
+    "question": "What does Article 47 of GDPR specifically say about banking customers?",
+    "ground_truth": "Article 47 of GDPR covers Binding Corporate Rules for intra-group data transfers and does not specifically address banking customers. A correct system should note that Article 47 concerns BCRs, not banking-specific provisions, rather than hallucinating banking-specific content for Article 47.",
+    "key_entities": ["GDPR", "Article 47", "Binding Corporate Rules"],
+    "source_docs": ["GDPR_Regulation_2016_679_EU.pdf", "GDPR_Banking_SAMPLE.txt"],
+    "expected_better_pipeline": "graph",
+    "is_trick_question": true,
+    "correct_response": "Article 47 does not specifically address banking customers — it covers Binding Corporate Rules"
+  },
+  {
+    "id": "T4_002",
+    "tier": 4,
+    "tier_name": "Adversarial / Hallucination Test",
+    "question": "What is the maximum fine for violating Basel III capital requirements?",
+    "ground_truth": "Basel III itself does not specify a maximum fine — it is a prudential framework, not a penal statute. Fines for non-compliance with Basel III as implemented through CRD IV/CRR are set by national competent authorities and vary by jurisdiction. A correct system should acknowledge this ambiguity rather than inventing a specific number.",
+    "key_entities": ["Basel III", "fine", "CRD IV", "CRR", "supervisory authority"],
+    "source_docs": ["Basel3_BIS_Framework.pdf"],
+    "expected_better_pipeline": "graph",
+    "is_trick_question": true,
+    "correct_response": "Basel III does not specify fines — these are set by national regulators under CRD IV/CRR"
+  },
+  {
+    "id": "T4_003",
+    "tier": 4,
+    "tier_name": "Adversarial / Hallucination Test",
+    "question": "Does MiFID II require banks to offer a cooling-off period for investment products?",
+    "ground_truth": "MiFID II does not itself mandate a cooling-off period for investment products. Cooling-off rights for certain financial products may be required under other EU legislation (Consumer Credit Directive, Distance Marketing Directive) but are not a MiFID II requirement. A correct system should accurately state the absence of this requirement in MiFID II.",
+    "key_entities": ["MiFID II", "cooling-off period", "Consumer Credit Directive"],
+    "source_docs": ["MiFID2_Directive_2014_65_EU.pdf", "MiFID2_SAMPLE.txt"],
+    "expected_better_pipeline": "graph",
+    "is_trick_question": true,
+    "correct_response": "MiFID II does not require a cooling-off period — this is governed by other directives"
+  },
+  {
+    "id": "T4_004",
+    "tier": 4,
+    "tier_name": "Adversarial / Hallucination Test",
+    "question": "What is the exact date that Basel IV replaces Basel III?",
+    "ground_truth": "There is no regulation officially called 'Basel IV' — it is an informal term used by practitioners for the final Basel III reforms (BCBS 2017). The reforms were being phased in with full implementation targeted for 2028 in the EU under CRR3. A correct system should clarify this naming ambiguity rather than asserting a specific date.",
+    "key_entities": ["Basel IV", "Basel III", "CRR3", "2028"],
+    "source_docs": ["Basel3_BIS_Framework.pdf"],
+    "expected_better_pipeline": "tie",
+    "is_trick_question": true,
+    "correct_response": "Basel IV is not an official regulation name — the final Basel III reforms target full implementation by 2028 under CRR3 in the EU"
+  },
+  {
+    "id": "T4_005",
+    "tier": 4,
+    "tier_name": "Adversarial / Hallucination Test",
+    "question": "Under GDPR, how long must banks retain customer personal data?",
+    "ground_truth": "GDPR does not specify a single retention period — it requires data to be kept no longer than necessary for the purpose (storage limitation principle, Article 5(1)(e)). In banking, retention is governed by sector-specific laws: AML records must be kept 5 years (AMLD5), transaction records at least 5 years (PSD2), some credit records up to 10 years. There is no single GDPR-mandated retention period for banks.",
+    "key_entities": ["GDPR", "retention period", "Article 5", "AMLD5", "PSD2", "5 years"],
+    "source_docs": ["GDPR_Regulation_2016_679_EU.pdf", "GDPR_Banking_SAMPLE.txt"],
+    "expected_better_pipeline": "graph",
+    "is_trick_question": false,
+    "correct_response": "No single period — varies by data type: 5 years for AML, 5+ years for transactions, governed by sector laws not GDPR directly"
+  }
+]

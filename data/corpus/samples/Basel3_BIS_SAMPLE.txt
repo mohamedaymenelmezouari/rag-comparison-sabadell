@@ -1,0 +1,66 @@
+Basel III: A Global Regulatory Framework for More Resilient Banks
+Bank for International Settlements (BIS) — BCBS Publication d424
+
+1. OVERVIEW
+Basel III strengthens bank capital requirements and introduces new regulatory requirements on bank liquidity and bank leverage. The framework aims to improve the banking sector's ability to absorb shocks arising from financial and economic stress.
+
+2. CAPITAL REQUIREMENTS
+
+2.1 Common Equity Tier 1 (CET1)
+- Minimum CET1 ratio: 4.5% of risk-weighted assets (RWA)
+- CET1 consists of: common shares, retained earnings, accumulated other comprehensive income
+- Instruments must be perpetual and discretionary as to dividends
+
+2.2 Tier 1 Capital
+- Minimum Tier 1 capital ratio: 6% of RWA
+- Tier 1 = CET1 + Additional Tier 1 (AT1)
+- AT1 instruments must be perpetual with no maturity date
+
+2.3 Total Capital
+- Minimum Total Capital ratio: 8% of RWA
+- Total Capital = Tier 1 + Tier 2 (T2)
+- T2 instruments include subordinated debt with minimum 5-year maturity
+
+2.4 Capital Conservation Buffer
+- 2.5% CET1 above minimum requirements
+- Restricts distributions when buffer is drawn down
+- Purpose: build up capital outside periods of stress
+
+2.5 Countercyclical Buffer
+- 0–2.5% CET1, set by national authorities
+- Activated during periods of excess credit growth
+- Purpose: protect banking sector from losses from excessive credit growth
+
+3. RISK-WEIGHTED ASSETS (RWA)
+
+3.1 Credit Risk
+- Standardised Approach: risk weights assigned based on external credit ratings
+- Internal Ratings-Based (IRB) Approach: banks estimate probability of default (PD), loss given default (LGD), and exposure at default (EAD)
+- Retail exposures: 75% risk weight under standardised approach
+- Mortgages secured on residential property: 35% risk weight
+
+3.2 Market Risk
+- Revised Fundamental Review of the Trading Book (FRTB)
+- Standardised Approach and Internal Models Approach (IMA)
+- Replaces Value-at-Risk (VaR) with Expected Shortfall (ES) at 97.5% confidence level
+
+3.3 Operational Risk
+- Standardised Measurement Approach (SMA)
+- Based on Business Indicator Component (BIC) and Internal Loss Multiplier (ILM)
+
+4. LIQUIDITY REQUIREMENTS
+
+4.1 Liquidity Coverage Ratio (LCR)
+- Minimum 100% LCR requirement
+- LCR = Stock of High Quality Liquid Assets (HQLA) / Total net cash outflows over 30 days
+- Ensures banks can survive a significant stress scenario for 30 days
+
+4.2 Net Stable Funding Ratio (NSFR)
+- Minimum 100% NSFR requirement
+- NSFR = Available Stable Funding (ASF) / Required Stable Funding (RSF)
+- Promotes more medium and long-term funding of assets
+
+5. LEVERAGE RATIO
+- Minimum Tier 1 leverage ratio: 3%
+- Non-risk-based backstop measure
+- Calculated as Tier 1 capital divided by total exposure measure
