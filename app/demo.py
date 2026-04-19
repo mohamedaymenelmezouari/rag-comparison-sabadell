@@ -756,14 +756,17 @@ with tab_demo:
 with tab_eval:
     st.markdown("<div class='section-hdr'>Evaluation Dashboard</div>", unsafe_allow_html=True)
 
-    _DARK_PLOT = dict(
+    _BASE_YAXIS = dict(showgrid=True, gridcolor="#111D35", tickfont=dict(color="#475569"), linecolor="#131F3A")
+    _DARK_PLOT  = dict(
         plot_bgcolor="#0C1526",
         paper_bgcolor="#0C1526",
         font=dict(family="Inter", size=12, color="#64748B"),
         margin=dict(t=55, b=25, l=25, r=25),
         xaxis=dict(showgrid=False, tickfont=dict(color="#475569"), linecolor="#131F3A"),
-        yaxis=dict(showgrid=True, gridcolor="#111D35", tickfont=dict(color="#475569"), linecolor="#131F3A"),
+        yaxis=_BASE_YAXIS,
     )
+    _DARK_PLOT_PCT = {**_DARK_PLOT, "yaxis": dict(**_BASE_YAXIS, ticksuffix="%")}
+    _DARK_PLOT_SEC = {**_DARK_PLOT, "yaxis": dict(**_BASE_YAXIS, ticksuffix="s")}
 
     history = st.session_state.query_history
     if history:
@@ -823,14 +826,13 @@ with tab_eval:
             barmode="group",
             yaxis_range=[0, 118],
             title=dict(text="Performance Metrics Comparison", font=dict(color="#64748B", size=13)),
-            **_DARK_PLOT,
             legend=dict(
                 orientation="h", yanchor="bottom", y=1.02,
                 font=dict(color="#64748B"), bgcolor="rgba(0,0,0,0)",
                 bordercolor="rgba(0,0,0,0)",
             ),
-            yaxis=dict(**_DARK_PLOT["yaxis"], ticksuffix="%"),
             bargap=0.25, bargroupgap=0.06,
+            **_DARK_PLOT_PCT,
         )
         st.plotly_chart(fig, use_container_width=True)
 
@@ -848,8 +850,7 @@ with tab_eval:
             fig2.update_layout(
                 title=dict(text="Hallucination Risk  (lower is better)", font=dict(color="#64748B", size=12)),
                 yaxis_range=[0, 105],
-                **_DARK_PLOT,
-                yaxis=dict(**_DARK_PLOT["yaxis"], ticksuffix="%"),
+                **_DARK_PLOT_PCT,
             )
             st.plotly_chart(fig2, use_container_width=True)
         with c2:
@@ -864,8 +865,7 @@ with tab_eval:
             ))
             fig3.update_layout(
                 title=dict(text="Average Latency  (lower is better)", font=dict(color="#64748B", size=12)),
-                **_DARK_PLOT,
-                yaxis=dict(**_DARK_PLOT["yaxis"], ticksuffix="s"),
+                **_DARK_PLOT_SEC,
             )
             st.plotly_chart(fig3, use_container_width=True)
     else:
