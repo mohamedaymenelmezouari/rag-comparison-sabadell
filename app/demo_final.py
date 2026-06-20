@@ -693,9 +693,16 @@ with tab_eval:
     _DARK   = dict(
         plot_bgcolor="#0C1526", paper_bgcolor="#0C1526",
         font=dict(family="Inter", size=12, color="#64748B"),
-        margin=dict(t=55, b=25, l=25, r=25),
+        margin=dict(t=70, b=40, l=35, r=25),
         xaxis=dict(showgrid=False, tickfont=dict(color="#475569"), linecolor="#131F3A"),
         yaxis=_BASE_Y,
+    )
+    # Legend placed below chart to avoid colliding with title
+    _LEGEND_BOTTOM = dict(
+        orientation="h", yanchor="top", y=-0.22,
+        xanchor="center", x=0.5,
+        font=dict(color="#64748B", size=11),
+        bgcolor="rgba(0,0,0,0)", bordercolor="rgba(0,0,0,0)",
     )
 
     r = FINAL_RESULTS
@@ -737,11 +744,11 @@ with tab_eval:
                textposition="outside", textfont=dict(color="#6EE7B7", size=11)),
     ])
     fig.update_layout(
-        barmode="group", yaxis_range=[0, 115],
-        title=dict(text="Performance Metrics Comparison  (June 2026 · n=75)", font=dict(color="#64748B", size=13)),
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, font=dict(color="#64748B"), bgcolor="rgba(0,0,0,0)"),
+        barmode="group", yaxis_range=[0, 120],
+        title=dict(text="Performance Metrics Comparison (June 2026, n=75)", font=dict(color="#64748B", size=13), pad=dict(b=12)),
+        legend=_LEGEND_BOTTOM,
         bargap=0.25, bargroupgap=0.06,
-        **{**_DARK, "yaxis": {**_BASE_Y, "ticksuffix": "%"}},
+        **{**_DARK, "margin": dict(t=70, b=85, l=35, r=25), "yaxis": {**_BASE_Y, "ticksuffix": "%"}},
     )
     st.plotly_chart(fig, use_container_width=True)
 
@@ -752,12 +759,13 @@ with tab_eval:
             y=[t["avg_hallucination_risk"], g["avg_hallucination_risk"]],
             marker_color=["#2563EB", "#059669"], marker_line_color="rgba(0,0,0,0)",
             text=[f"{t['avg_hallucination_risk']}%", f"{g['avg_hallucination_risk']}%"],
-            textposition="outside", textfont=dict(color="#94A3B8", size=11),
+            textposition="outside", textfont=dict(color="#94A3B8", size=12),
+            width=[0.45, 0.45],
         ))
         fig2.update_layout(
-            title=dict(text="Hallucination Risk  (lower is better)", font=dict(color="#64748B", size=12)),
-            yaxis_range=[0, 40],
-            **{**_DARK, "yaxis": {**_BASE_Y, "ticksuffix": "%"}},
+            title=dict(text="Hallucination Risk (lower is better)", font=dict(color="#64748B", size=12), pad=dict(b=10)),
+            yaxis_range=[0, 35],
+            **{**_DARK, "margin": dict(t=70, b=40, l=35, r=25), "yaxis": {**_BASE_Y, "ticksuffix": "%"}},
         )
         st.plotly_chart(fig2, use_container_width=True)
 
@@ -767,12 +775,13 @@ with tab_eval:
             y=[t["avg_latency"], g["avg_latency"]],
             marker_color=["#2563EB", "#059669"], marker_line_color="rgba(0,0,0,0)",
             text=[f"{t['avg_latency']}s", f"{g['avg_latency']}s"],
-            textposition="outside", textfont=dict(color="#94A3B8", size=11),
+            textposition="outside", textfont=dict(color="#94A3B8", size=12),
+            width=[0.45, 0.45],
         ))
         fig3.update_layout(
-            title=dict(text="Average Latency  (lower is better)", font=dict(color="#64748B", size=12)),
+            title=dict(text="Average Latency per Query (lower is better)", font=dict(color="#64748B", size=12), pad=dict(b=10)),
             yaxis_range=[0, 5],
-            **{**_DARK, "yaxis": {**_BASE_Y, "ticksuffix": "s"}},
+            **{**_DARK, "margin": dict(t=70, b=40, l=35, r=25), "yaxis": {**_BASE_Y, "ticksuffix": "s"}},
         )
         st.plotly_chart(fig3, use_container_width=True)
 
@@ -790,12 +799,12 @@ with tab_eval:
                textfont=dict(color="#6EE7B7", size=10)),
     ])
     fig4.update_layout(
-        barmode="group", yaxis_range=[0, 115],
-        title=dict(text="Accuracy by Tier — Graph RAG advantage grows with query complexity",
-                   font=dict(color="#64748B", size=13)),
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, font=dict(color="#64748B"), bgcolor="rgba(0,0,0,0)"),
+        barmode="group", yaxis_range=[0, 120],
+        title=dict(text="Accuracy by Query Tier: the Graph RAG advantage grows with complexity",
+                   font=dict(color="#64748B", size=13), pad=dict(b=12)),
+        legend=_LEGEND_BOTTOM,
         bargap=0.2, bargroupgap=0.05,
-        **{**_DARK, "yaxis": {**_BASE_Y, "ticksuffix": "%"}},
+        **{**_DARK, "margin": dict(t=70, b=90, l=35, r=25), "yaxis": {**_BASE_Y, "ticksuffix": "%"}},
     )
     st.plotly_chart(fig4, use_container_width=True)
 
@@ -805,7 +814,7 @@ with tab_eval:
         st.info("Evaluation results file not found. Run `python3 evaluation/evaluator.py` from the terminal.")
         if st.session_state.pipelines_ready:
             if st.button("Run Quick Evaluation  (5 questions)", type="primary"):
-                with st.spinner("Running evaluation — approximately 3 minutes…"):
+                with st.spinner("Running evaluation (approximately 3 minutes)…"):
                     from evaluation.evaluator import run_evaluation
                     run_evaluation(max_questions=5)
                 st.rerun()
